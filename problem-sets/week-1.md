@@ -86,7 +86,7 @@ Out : Root of below tree
 
 **Extension: do this in place. (No additional data structures).**
 
-**Extension II: do this in place, without dividing.**
+**Extension II: do this in place, without dividing. (You're allowed Constant Time Space ( O(1) ) additional data structures)**
 
 > Remember to also consider edge cases!
 
