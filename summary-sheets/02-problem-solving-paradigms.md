@@ -25,17 +25,22 @@ of {0, 1, 2, . . .,N − 1} will require **_O(N!)_** regardless.
 * When better algorithms exist, but are overkill as the input size is small (e.g. N < 100)
 
 In ICPC (International Collegiate Programming Contest), Complete Search should be the first solution considered 
-as it is easy to come up with and code it. A A bug-free Complete Search solution should never receive the
+as it is easy to come up with and code it. A bug-free Complete Search solution should never receive the
 Wrong Answer (WA) response in programming contests as it explores the entire search space. However, it can excede 
-(most probably does) the time limit and therefore we need a better solution.
+(and most probably does) the time limit and therefore we often need a better solution.
 
-**Example**: Given 6 < k < 13 integers, enumerate all oissible subsets of size 6 of these integers in sorted order.
+**Example**: Given 6 < k < 13 integers, enumerate all possible SORTED subsets of size 6 of these integers in sorted order.
 
 **Answer**: 
 ~~~java
 // S is array of k integers
- for (int a = 0; a < k - 5; a++)
-  for (int b = a += 1; b < k - 4; b++)
+// {1,2,3,4,5,6,7,8}
+ // Loops through {1, 2, 3} as possible first integers of the sorted subset.
+ for (int a = 0; a < k - 5; a++) 
+  // When looping through 1, loops through {2, 3, 4} as possible second integers.
+  // When looping through 2, loops through {3, 4} as possible second integers.
+  for (int b = a + 1; b < k - 4; b++)
+    // etc.
     for (int c = b + 1; c < k - 3; c++)
       for (int d = c + 1; d < k - 2; d++)
         for (int e = d + 1; e < k - 1; e++)
@@ -44,7 +49,7 @@ Wrong Answer (WA) response in programming contests as it explores the entire sea
 ~~~
 ### Tips for Complete Search
 #### Tip 1:  Filtering versus Generating
-**Filters:** Programs that examine lots of (if not all) candidate solutions and choose the ones that are
+**Filters:** Programs that build and examine lots of (if not all) candidate solutions and *then* choose the ones that are
 correct (or remove the incorrect ones).
 
 **Generators:** Programs that gradually build the solutions and immediately prune invalid partial solutions.
@@ -255,8 +260,8 @@ The brute-force solution can be obtained using the recursive formula:
 ~~~
 If V == 0, then 0 coins required.
 If V > 0
-   minCoin(coins[0..m-1], V) = min {1 + minCoins(V-coin[i])} <br/>
-                               where i varies from 0 to m-1  <br/>
+   minCoin(coins[0..m-1], V) = min {1 + minCoins(V-coin[i])} 
+                               where i varies from 0 to m-1  
                                and coin[i] <= V 
 ~~~
 
@@ -299,7 +304,8 @@ class coin
        System.out.println("Minimum coins required is "+ minCoins(coins, m, V) ); 
     } 
 
-}/* This code is contributed by Rajat Mishra */
+}
+/* Credit to Geeks4Geeks for this code */
 ~~~
 
 **Output**
@@ -371,18 +377,10 @@ class GFG
     } 
 } 
 
-//This article is contributed by vt_m. 
+/* Credit to Geeks for Geeks for this code */
 ~~~
 
 **Output**
 ~~~
 Minimum coins required is 2
 ~~~
-
-
-
-
-
-
-
-
