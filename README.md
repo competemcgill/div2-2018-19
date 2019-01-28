@@ -39,15 +39,15 @@ This series is a mandate of the Competitions Subcommittee in particular - if you
 An additional thanks goes out to the Compete McGill Executive Team, who are responsible for the overall functioning of the club - these guys dedicate an extremely huge amount of time to making sure all of this is possible and are under lots of pressure to make the club an accessible and enjoyable environment for everyone!
 
   
-| Executive Member |        Role       |
-|------------------|:-----------------:|
-| Andree Kaba      |   **President**   |
-| Afreen Aliya     |     VP Events     |
-| Imad Dodin       |  VP Competitions  |
-| Zachary Feng     | VP Communications |
-| Andrea Hyder     |    VP Internal    |
-| Parth Khanna     |    VP External    |
-| Kelvin Tagoe     |    VP Finance     |
+| Executive Member |        Role       | GitHub Profile                                    |
+|------------------|:-----------------:|:-------------------------------------------------:|
+| Andree Kaba      |   **President**   | [:octocat:](https://github.com/Andrewviski)       |
+| Afreen Aliya     |     VP Events     | [:octocat:](https://github.com/Afreen95)          |
+| Imad Dodin       |  VP Competitions  | [:octocat:](https://github.com/idodin)            |
+| Zachary Feng     | VP Communications | [:octocat:](https://github.com/zachary-feng)      |
+| Andrea Hyder     |    VP Internal    | [:octocat:](https://github.com/andreahyder)       |
+| Parth Khanna     |    VP External    | [:octocat:](https://github.com/parthkhanna150)    |
+| Kelvin Tagoe     |    VP Finance     | [:octocat:](https://github.com/klvntagoe)         |
 
 
 
