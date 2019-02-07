@@ -1,6 +1,7 @@
 
 /**
  * Implementation of summing two reversed integer linked lists.
+ * 
  * @author Imad Dodin
  *
  */
@@ -10,10 +11,11 @@ public class Question3 {
 		Node res = sumLL(intToLL(111111), intToLL(222));
 		printLL(res);
 	}
-	
 
 	/**
-	 * Utility function to convert an integer into its reversed LinkedList representation.
+	 * Utility function to convert an integer into its reversed LinkedList
+	 * representation.
+	 * 
 	 * @param x integer to convert.
 	 * @return head of resultant LinkedList.
 	 */
@@ -28,9 +30,10 @@ public class Question3 {
 
 		return head.next;
 	}
-	
+
 	/**
 	 * Utility function to print contents of a LinkedList
+	 * 
 	 * @param head Head of LinkedList to print.
 	 */
 	private static void printLL(Node head) {
@@ -46,15 +49,18 @@ public class Question3 {
 
 	/**
 	 * Implementation of sum of 2 reversed integer LinkedLists.
+	 * 
 	 * @param h1 Head of first reversed integer LinkedList
 	 * @param h2 Head of second reversed integer LinkedList
 	 * @return Head of reversed integer LinkedList of sum
 	 */
 	public static Node sumLL(Node h1, Node h2) {
 		// Check edge cases.
-		if(h1==null && h2==null) return null;
-		if(h1==null || h2==null) return h1==null ? h2: h1;
-		
+		if (h1 == null && h2 == null)
+			return null;
+		if (h1 == null || h2 == null)
+			return h1 == null ? h2 : h1;
+
 		// Instantiate Dummy and Head variable (for eventual return).
 		Node dummy = new Node(0);
 		Node head = dummy;
@@ -64,22 +70,22 @@ public class Question3 {
 		// but this is good practice.
 		Node pointer1 = h1;
 		Node pointer2 = h2;
-		
-		// Carry 
+
+		// Carry
 		int carry = 0;
 
 		// Loop as long as there is something to sum.
 		while (pointer1 != null || pointer2 != null) {
-			
+
 			// Sum values if pointers are not null.
 			int sum = (pointer1 != null ? pointer1.value : 0) + (pointer2 != null ? pointer2.value : 0) + carry;
-			
+
 			// Instantiate next node with sum.
 			dummy.next = new Node(sum % 10);
-			
+
 			// Take care of carry.
 			carry = sum / 10;
-			
+
 			// Increment pointers.
 			dummy = dummy.next;
 			if (pointer1 != null)
@@ -94,6 +100,21 @@ public class Question3 {
 
 		// Return real head.
 		return head.next;
+	}
+
+	/**
+	 * Definition of a simple LinkedList Node with integer value.
+	 * 
+	 * @author Imad Dodin
+	 *
+	 */
+	private static class Node {
+		int value;
+		Node next;
+
+		public Node(int value) {
+			this.value = value;
+		}
 	}
 
 }
